@@ -22,7 +22,7 @@ app = Client(
 
 @app.on_message(filters.private & filters.command(['start']))
 async def start(client, message):
-	await message.reply_text(text =f"Hello **{message.from_user.first_name }** \n\n __I am an advance  Google Translater Bot \n I can translate any language to you selected language__",reply_to_message_id = message.message_id ,parse_mode="markdown", reply_markup=InlineKeyboardMarkup([ [                    InlineKeyboardButton("📦 open socure 📦" ,url="https://github.com/youtubeslgeekshow/google-translate-bot") ],               [InlineKeyboardButton("👨‍💻 create your one 👨‍💻", url="https://www.youtube.com/channel/UCvYfJcTr8RY72dIapzMqFQA?sub_confirmation=1") ]   ]  ) )
+	await message.reply_text(text =f"Hello **{message.from_user.first_name }** \n\n __I am an advance  Google Translater Bot created by @networkchukka \n Join our channel @ehivpsssh \n Join our group @ehivpnssh  \n I can translate any language to you selected language__",reply_to_message_id = message.message_id ,parse_mode="markdown", reply_markup=InlineKeyboardMarkup([ [                    InlineKeyboardButton("📦 open socure 📦" ,url="https://github.com/NetworkChukka/google-translate-bot") ],               [InlineKeyboardButton("👨‍💻 my master 👨‍💻", url="https://t.me/networkchukka") ]   ]  ) )
                   
 
 
@@ -256,21 +256,21 @@ async def translate_text(bot,update):
   tr_text = update.message.reply_to_message.text
   cb_data = update.data
   if cb_data== "page2":
-  	await update.message.edit("Select language 👇",reply_markup = keybord2)
+      await update.message.edit("Select language 👇",reply_markup = keybord2)
   elif cb_data == "page1":
-  	await update.message.edit("Select language 👇",reply_markup =keybord1)
+      await update.message.edit("Select language 👇",reply_markup =keybord1)
   elif cb_data =="page3":
-  	await update.message.edit("Select language 👇",reply_markup =keybord3)
+      await update.message.edit("Select language 👇",reply_markup =keybord3)
   elif cb_data == "page4":
-  	await update.message.edit("Select language 👇",reply_markup =keybord4)
+      await update.message.edit("Select language 👇",reply_markup =keybord4)
   elif cb_data =="page5":
-  	await update.message.edit("Select language 👇",reply_markup =keybord5)
+      await update.message.edit("Select language 👇",reply_markup =keybord5)
   elif cb_data =="page6":
-  	await update.message.edit("Select language 👇",reply_markup =keybord6)
+      await update.message.edit("Select language 👇",reply_markup =keybord6)
   else :
-  	translator = google_translator()
-  	translated_text = translator.translate(tr_text,lang_tgt=cb_data)
-  	await update.message.edit(translated_text)
+      translator = google_translator()
+      translated_text = translator.translate(tr_text,lang_tgt=cb_data)
+      await update.message.edit(translated_text)
 
 
 app.run()
